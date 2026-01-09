@@ -13,13 +13,18 @@
       content="galeria de fotos, fauna brasileira, animais do brasil, aplicação web"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+
     <title>Aplicação de Galeria de Fotos - Fauna Brasileira</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Aplicação de Galeria de Fotos - Fauna Brasileira</h1>
+      <h1>Galeria de Fotos - Fauna Brasileira</h1>
     </header>
 
     <!-- Conteúdo principal -->
@@ -43,8 +48,15 @@
 
     <!-- Rodapé -->
     <footer>
-      <p> © 2026 Galeria de Fotos. Todos os direitos reservados.</p>
+      <p>© 2026 Galeria de Fotos. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Modal para visualização da foto -->
+    <div class="modal" id="photoModal">
+      <span class="close" id="closeModal">&times;</span>
+      <img class="modal-image" id="modalImage" alt="" />
+      <p class="modal-title" id="modalTitle"></p>
+    </div>
 
     <!-- Script -->
     <script src="script.js"></script>
