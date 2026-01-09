@@ -1,0 +1,141 @@
+/* ==========================
+   Reset básico
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================
+   Variáveis de estilo
+========================== */
+:root {
+  --bg-color: #f7f9f4;
+  --text-color: #1a202c;
+  --primary-color: #2f855a;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================
+   Estilo geral
+========================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================
+   Header
+========================== */
+header {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ==========================
+   Main
+========================== */
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+/* ==========================
+   Barra de busca
+========================== */
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.search input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.search button {
+  padding: 0.6rem 0.8rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search button:hover {
+  opacity: 0.9;
+}
+
+/* ==========================
+   Galeria
+========================== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ==========================
+   Card da foto
+========================== */
+.photo-card {
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.photo-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px var(--shadow);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.photo-card p {
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
